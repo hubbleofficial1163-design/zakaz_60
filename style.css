@@ -17,9 +17,9 @@ body {
 
 /* Hero секция - СВЕТЛЫЙ ФОН */
 .hero {
-    height: 100vh;
     height: 100svh;
     min-height: 100svh;
+    max-height: 100svh;
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -992,6 +992,12 @@ a,
 @media screen and (max-width: 479px) {
 
     /* Hero секция */
+    .hero {
+        height: 100svh;
+        min-height: 100svh;
+        max-height: 100svh;
+    }
+
     .hero-content {
         padding-top: 12svh;
     }
