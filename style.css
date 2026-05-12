@@ -42,14 +42,14 @@ body {
 /* Фото в hero */
 .hero-photo {
     position: absolute;
-    width: 450px;
+    width: 340px;
     height: auto;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     border-radius: 40px 40px 0 0;
-    max-width: 90%;
+    max-width: 78%;
 }
 
 .hero::after {
@@ -908,7 +908,7 @@ body {
 /* Фото в hero - опускаем немного ниже */
 .hero-photo {
     position: absolute;
-    width: 450px;
+    width: 340px;
     height: auto;
     bottom: -50px;
     left: 50%;
@@ -1012,9 +1012,9 @@ a,
     }
 
     .hero-photo {
-        width: 380px;
+        width: 280px;
         bottom: 0;
-        max-width: 85%;
+        max-width: 72%;
     }
 
     /* Плеер */
@@ -1227,7 +1227,7 @@ a,
     }
 
     .hero-photo {
-        width: 320px;
+        width: 250px;
     }
 
     .countdown-number {
