@@ -84,7 +84,7 @@ body {
     letter-spacing: 0.15rem;
     line-height: 1.2;
     color: #5c151b;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 /* Секция с локацией - БОРДОВЫЙ ФОН */
