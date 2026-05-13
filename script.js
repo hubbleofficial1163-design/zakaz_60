@@ -1,4 +1,4 @@
-// Скрипт для свадебного сайта Андрей & Диана
+// Скрипт для свадебного сайта Айбулат & Айһылыу
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Свадебный сайт загружен');
     
@@ -235,7 +235,7 @@ function showLoadingModal() {
                 width: 50px;
                 height: 50px;
                 border: 3px solid #e0e0e0;
-                border-top-color: #999;
+                border-top-color: #5c151b;
                 border-radius: 50%;
                 margin: 0 auto 20px;
                 animation: spin 1s linear infinite;
@@ -252,7 +252,7 @@ function showLoadingModal() {
 }
 
 // ========== GOOGLE SHEETS ==========
-const SCRIPT_URL = 'https://script.gooPfEUmgIOQLFrZLZZiSTcPwwQHCYO-D98q/exec'; // ЗАМЕНИТЕ НА ВАШ URL
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby_PUHfzhF8JZlGj1DWbuHn7E7mEi_YFO4kdW1LzkuuxkqOSmxLXRP1qx6fj3qkERHJ/exec'; // ЗАМЕНИТЕ НА ВАШ URL
 
 // Инициализация формы RSVP
 function initRSVPForm() {
@@ -267,16 +267,12 @@ function initRSVPForm() {
         
         // Получаем данные
         const nameInput = this.querySelector('input[type="text"]');
-        const guestsSelect = this.querySelector('.form-select');
-        const allergyInput = this.querySelector('#allergy');
         const attendanceRadio = this.querySelector('input[name="attendance"]:checked');
         
         const name = nameInput ? nameInput.value.trim() : '';
-        const guests = guestsSelect ? guestsSelect.value : '1';
-        const allergy = allergyInput ? allergyInput.value.trim() : '';
         const attendance = attendanceRadio ? attendanceRadio.value : null;
         
-        // Собираем выбранные алкогольные предпочтения (несколько чекбоксов)
+        // Собираем выбранные алкогольные предпочтения
         let alcoholValues = [];
         document.querySelectorAll('input[name="alcohol"]:checked').forEach(checkbox => {
             alcoholValues.push(checkbox.value);
@@ -304,8 +300,6 @@ function initRSVPForm() {
             // Формируем данные для отправки
             const formDataToSend = new URLSearchParams();
             formDataToSend.append('name', name);
-            formDataToSend.append('guests', guests);
-            formDataToSend.append('allergy', allergy);
             formDataToSend.append('attendance', attendance);
             
             for (const alcohol of alcoholValues) {
